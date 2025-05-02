@@ -28,6 +28,13 @@ export default function Home() {
       });
     } else {
       getTasks(); // Refresh tasks after updating
+      Swal.fire({
+        title: "Task Completed!",
+        text: "You have successfully completed the task.",
+        icon: "success",
+        confirmButtonText: "Great!",
+        confirmButtonColor: "#3085d6", // Custom button color
+      });
     }
   };
 
@@ -43,6 +50,13 @@ export default function Home() {
         confirmButtonColor: "#3085d6",
       });
     } else {
+      Swal.fire({
+        title: "Deleted!",
+        text: "The task has been deleted successfully.",
+        icon: "success",
+        confirmButtonText: "Okay",
+        confirmButtonColor: "#3085d6",
+      });
       // Refresh the tasks after deleting
       getTasks();
     }
